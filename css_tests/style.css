@@ -1,1 +1,25 @@
-strong {color: red;}
+body {
+  font: 16px "Comic Sans MS", cursive;
+}
+
+strong {
+  color: red;
+  font-size: 2em;
+}
+
+/*classes has priority over tags, so the tag p must be blue, but the class .carrot is orange and orange wins*/
+.carrot {
+  color:orange;
+}
+
+.spinach{
+  color:green;
+}
+
+#first {
+  font-style:italic;
+}
+
+p {
+  color:blue;
+}
