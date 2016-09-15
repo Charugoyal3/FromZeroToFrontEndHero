@@ -7,7 +7,15 @@ h3:before {
   counter-increment: headnum;
 }
 /* numbered paragraphs */
-h3.numbered {counter-reset: mynum;}
+h3.numbered {
+  counter-reset: mynum;
+}
+
+h3 {
+  border-top: 1px solid gray;
+  text-align: center;
+  clear: left;
+}
 
 p.numbered:before {
   content: counter(mynum) ": ";
@@ -15,6 +23,39 @@ p.numbered:before {
   font-weight: bold;
 }
 
-.roman {
-    list-style: upper-roman;
+li {
+  list-style: lower-roman;
+  margin-bottom: 8px;
+}
+
+ul, #numbered {
+  border: 1em solid #69b;
+  padding-right:1em;
+  float:left;
+}
+
+#parent-div {
+  position: relative;
+  font: bold 200% sans-serif;
+}
+
+#forward, #back {
+  position: absolute;
+  margin:0px; /* no margin around the elements */
+  top: 0px; /* distance from top */
+  left: 0px; /* distance from left */
+}
+
+#forward {
+  color: blue;
+}
+
+#back {
+  color: red;
+}
+
+#fixed-pin {
+  position:fixed;
+  top: 2px;
+  right: 2px;
 }
